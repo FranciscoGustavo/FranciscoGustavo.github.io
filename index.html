@@ -1,15 +1,69 @@
+<!--
+	CREATE BY FRANCISCO GUSTAVO HIDALGO LÓPEZ
+	WEB: WWW.BIBLIOTECAGEEK.HEROKUAPP.COM
+	FACEBOOK: BIBLIOTECA GEEK OR FRANCISCO GUSTAVO HIDALGO LÓPEZ
+	TWITTER: BIBLIOTECA GEEK
+	YOUTUBE: BIBLIOTECA GEEK
+-->
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
 	<title>Biblioteca Geek</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="styles/styles_start.css">
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet"> 
+
 </head>
-<body id="body" onresize="autoMenu()">
-	<header>
+<body>
+	<header class="content-header">
+
+		<div class="bottom-menu" onclick="switchMenu()">
+			<span class="icon-menu" ></span>
+		</div>
+
+		<div class="logo">
+			<a href="index.html">BIBLIOTECA GEEK</a>
+		</div>
+
+		<div id="menu" class="nav">
+			<nav>
+				<ul>
+					<li>
+						<a href="#">Cursos</a>
+					</li>
+					<li>
+						<a href="">Articulos</a>
+					</li>
+					<li>
+						<a href="">Contacto</a>
+					</li>
+					<li>
+						<a href="">Servisios</a>
+					</li>
+					<li>
+						<a href="">Donaciones</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+
+		<div class="bottom-search">
+			<span class="icon-search" ></span>
+		</div>
+
+		<div id="background-dark" class="background-dark" onclick="switchMenu()"></div>
+
+	</header>
+
+	<script src = "js/main.js">
+
+	</script>
+	<!--header>
 		<div class="container">
 			<div class="left">
 				<div class="bottom">
@@ -80,14 +134,14 @@
 		<div class="botones">
 			<a href="">Iniciar sesion</a>
 			<a href="">Registrate</a>
-		</div>	
+		</div>
 	</div>
 	<div class="start">
 		<div class="container">
 			<div class="botones">
 				<a href="">Iniciar sesion</a>
 				<a href="">Registrate</a>
-			</div>	
+			</div>
 			<div class="informacion">
 				<div class="text">
 					<p>
@@ -96,7 +150,7 @@
 					</p>
 				</div>
 			</div>
-		</div>	
+		</div>
 	</div>
 	<div class="courses">
 		<div class="container">
@@ -166,7 +220,7 @@
 							</div>
 						</div>
 					</a>
-					
+
 					<a href="">
 						<div class="card-curso">
 							<div class="image">
@@ -414,6 +468,6 @@
 
 	<div id="background" class="background" onclick="closeUser()"></div>
 
-	<script src="js/main.js"></script>
+	<script src="js/main.js"></script-->
 </body>
 </html>

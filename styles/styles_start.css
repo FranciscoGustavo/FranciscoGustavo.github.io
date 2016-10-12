@@ -1,38 +1,29 @@
-* {
-	margin: 0;
-	padding: 0;
-}
+/*
+	CREATE BY FRANCISCO GUSTAVO HIDALGO LÓPEZ
+	WEB: WWW.BIBLIOTECAGEEK.HEROKUAPP.COM
+	FACEBOOK: BIBLIOTECA GEEK OR FRANCISCO GUSTAVO HIDALGO LÓPEZ
+	TWITTER: BIBLIOTECA GEEK
+	YOUTUBE: BIBLIOTECA GEEK
 
-body {
-	font-family: 'Roboto Condensed', sans-serif;
-	font-weight: 300;
-	font-size: 16px;
-}
+	ORDER OF STYLES:
+		LABEL {
+			POSITION:
+				TOP
+				RIGHT
+				BOTTOM
+				LEFT
+			WIDTH
+			HEIGHT
+			BACKGROUND
+			COLOR
+			FONTS
+		}
+*/
 
-a {
-	text-decoration: none;
-}
+@import "components/styles-predefined.css";
+@import "components/styles-header.css"
+/*
 
-ul, ol {
-	list-style: none;
-}
-
-img {
-	width: 100%;
-	height: 100%;
-}
-
-header {
-	background: #03a9f4;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 50px;
-	box-shadow: 0 0 7px rgba(0,0,0,.5);
-	color: #FFF;
-	z-index: 100;
-}
 
 header div.container {
 	display: flex;
@@ -158,16 +149,16 @@ div.foto div.foto-perfil {
 
 div.user div.botones {
 	margin-top: 100px;
-	/*transform: translateY(-25vh);*/
+	transform: translateY(-25vh);
 }
 
-div.start /*div.courses,	 div.articles*/{
+div.start div.courses,	 div.articles{
 	height: 100vh;
 }
 
 div.start {
 	background: url(../img/Fondo-380.jpg);
-	background-size: 100% 100%;	
+	background-size: 100% 100%;
 }
 
 div.container {
@@ -190,7 +181,7 @@ div.start div.container div.botones a, div.botones a{
 	margin-bottom: 10px;
 	padding: 7px 0;
 	color: #424242;
-	background: #F1F1F1; 
+	background: #F1F1F1;
 	box-shadow:	0 0 5px rgba(15,15,15,.5);
 	border-radius: 5px 5px;
 	max-width: 300px;
@@ -207,7 +198,7 @@ div.start div.container div.informacion div.text {
 	padding: 15px 0;
 	width: 90%;
 	max-width: 300px;
-	margin: auto; 
+	margin: auto;
 	border-top: 2px solid #c1c1c1;
 	color: #FFF;
 	font-size: 1.2em;
@@ -266,7 +257,7 @@ div.time, div.videos, div.descripcion {
 div.boton a {
 	display: block;
 	max-width: 300px;
-	margin: auto;	
+	margin: auto;
 	background: #fff;
 	text-align: center;
 	padding: 15px 0;
@@ -378,7 +369,7 @@ div.background {
 
 	div.start {
 		background: url(../img/Fondo-600.jpg);
-		background-size: 100% 100%;	
+		background-size: 100% 100%;
 	}
 
 	div.articles div.contenido {
@@ -403,14 +394,14 @@ div.background {
 
 	footer div.social > div {
 		width: 150px;
-	} 
+	}
 
 }
 
 @media (min-width: 600px) and (orientation: landscape) {
 	div.start {
 		background: url(../img/Fondo-600-Horizontal.jpg);
-		background-size: 100% 100%;	
+		background-size: 100% 100%;
 	}
 
 	div.start div.container {
@@ -450,12 +441,12 @@ div.background {
 	}
 
 	header div.right nav ul li a:hover {
-		border-bottom: 3px solid #FFF;		
+		border-bottom: 3px solid #FFF;
 	}
 
 	div.start {
 		background: url(../img/Fondo-1024.jpg);
-		background-size: 100% 100%;	
+		background-size: 100% 100%;
 	}
 
 	div.articles div.row div.col div.card:nth-child(3) {
@@ -477,3 +468,4 @@ div.background {
 	}
 
 }
+*/
