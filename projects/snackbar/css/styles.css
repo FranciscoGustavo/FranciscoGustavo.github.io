@@ -40,7 +40,7 @@ button#button_snackbar {
   font-size: 1.1em;
   font-weight: bold;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-  transition: all .2s; }
+  transition: all 2s; }
   button#button_snackbar:hover {
     background: rgba(158, 158, 158, 0.2); }
   button#button_snackbar:focus {
@@ -51,6 +51,15 @@ button#button_snackbar {
     outline: none;
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
     background: rgba(158, 158, 158, 0.4); }
+  button#button_snackbar .ripple {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
 
 #snackbar {
   position: absolute;
@@ -88,3 +97,23 @@ button#button_snackbar {
     transition: all .4s; }
     #snackbar button:focus, #snackbar button:active {
       outline: none; }
+
+@-webkit-keyframes ripple {
+  0% {
+    width: 0px;
+    height: 0px; }
+  97% {
+    width: 250px;
+    height: 250px; }
+  100% {
+    opacity: 0; } }
+
+@keyframes ripple {
+  0% {
+    width: 0px;
+    height: 0px; }
+  97% {
+    width: 250px;
+    height: 250px; }
+  100% {
+    opacity: 0; } }

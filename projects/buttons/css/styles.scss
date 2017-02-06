@@ -1,0 +1,136 @@
+*{
+	margin: 0;
+	border: 0;
+}
+
+body{
+	font-size: 16px;
+	font-weight: normal;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+button.material-button{
+	position: relative;
+	display: flex;
+	padding: 10px 20px;
+	border-radius: 2px;
+	background: rgba(158,158,158,.2);
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+	color: #424242;
+	font-size: 1.1em;
+	font-weight: bold;
+	overflow: hidden;
+	transition: all .5s;	
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+	&:hover{
+		background: rgba(158,158,158,.2);
+	}
+
+	&:focus{
+		outline: none;
+		box-shadow: 0 0 8px rgba(0,0,0,.18), 0 8px 16px rgba(0,0,0,.36);
+		background: rgba(158,158,158,.4);
+	}
+
+	&:active{
+		outline: none;
+		box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
+		background: rgba(158,158,158,.4);
+	}
+}
+
+button.flat-button{
+	background: rgba(0,0,0,.05);
+	box-shadow: none;
+
+	&:hover{
+		background: rgba(0,0,0,.05);
+	}
+
+	&:focus, &:active{
+		outline: none;
+		box-shadow: none;
+		background: transparent;
+	}
+}
+
+button.circle-button{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	padding: 0; 
+	background: rgb(244, 67, 54)/*rgb(63, 81, 181)*/;
+	color: #FFF;
+	i {
+		pointer-events: none;
+		margin: auto;
+		font-size: 2.5em;
+		text-align: center;
+	}
+	.ripple{
+		background: rgba(255,255,255,.3);
+	}
+
+	&:hover{
+		background: rgb(244, 67, 54);
+	}
+}
+button.colored{
+	background: #3f51b5;
+	color: #fff;
+	&:nth-child(1){
+		&:hover{
+			background: #3f51b5;
+		}
+	}
+	&:nth-child(2){
+		background: #ff4081;
+	}
+	&:nth-child(3){
+		background: #ff4081;
+	}
+}
+
+.ripple{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,.3);
+	border-radius: 50%;
+	pointer-events: none;
+	transform: translate(-50%,-50%);
+}
+
+
+
+@keyframes ripple {
+	0%{
+		width: 0px;
+		height: 0px;
+	}
+
+	97%{
+		width: 250px;
+		height: 250px;
+	}
+
+	100%{
+		opacity: 0;
+	}
+}
+
+.content {
+	width: 90%;
+	margin: auto;
+	h1{
+		text-align: center;
+		font-size: 1.5em;
+		font-weight: normal;
+
+	}
+	.button-container{
+		display: flex;
+		justify-content: space-around;
+	}
+}

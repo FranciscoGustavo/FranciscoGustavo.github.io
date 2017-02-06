@@ -2,53 +2,59 @@
 	window.addEventListener("load", function(){
 
 		console.log("Cargado")
-		var buttonSnack = document.getElementById('button_snackbar')
+		var buttonSnack = document.querySelector('.effect_ripple')
 		var snackbar = document.getElementById('snackbar')
 		var closed = document.getElementById('closed')
 
-		var riplle = document.querySelector('.riplle')
-
-		buttonSnack.addEventListener("click",function(event){
-			x=event.clientX;
-			y=event.clientY;
-			 
-			console.log("X: "+x);
-			console.log("Y: "+y);
-			
-			var posicion = buttonSnack.getBoundingClientRect();
- 
-			console.log("top: "+posicion.top, "\nright: "+posicion.right, "\nbottom: "+posicion.bottom, "\nleft: "+posicion.left);
-			console.log("top: "+ (y - posicion.top), "Left: "+(x-posicion.left));
+		// Abrir snackbar
+		buttonSnack.addEventListener("click",function(){
+			// Agregamos efecto ripple
+			addEfectRipple(buttonSnack);
 
 			snackbar.style.transform = "translate(-50%,0%)";
+			buttonSnack.blur()
 
-			riplle.style.top = (y-posicion.top) + "px";
-			riplle.style.left = (x-posicion.left) + "px";
-
-			setTimeout(function(){
-				riplle.style.opacity = "1";
-				riplle.style.width = "225px";
-				riplle.style.height = "225px";
-			},200);
-
-			setTimeout(function(){
-				riplle.style.opacity = "0";
-			},1000);
-
-			setTimeout(function(){
-				riplle.style.width = "0px";
-				riplle.style.height = "0px"
-			},1200);
-
-			buttonSnack.blur();
-			console.log("quitar")
 			setTimeout(function(){
 				snackbar.style.transform = "translate(-50%,100%)";
-			},2500);
+			},5000);
 		})
 
+
+		// Cerrar snackbar
 		closed.addEventListener("click",function(){
 			snackbar.style.transform = "translate(-50%,100%)";
 		})
+
+		function cordenadasX(){
+			return event.clientX;
+		}
+
+		function cordenadasY(){
+			return event.clientY;
+		}
+
+		function addEfectRipple(element){
+			var ripple = element.querySelector(".ripple")
+
+			// Sacamos cordenadas donde se dio un click sobre el boton
+			x = cordenadasX();
+			y = cordenadasY();
+			
+			// Sacamos cordenadas del boton (el elemento)
+			var cords = element.getBoundingClientRect();
+
+			// Agregamos los efectos del ripple
+			ripple.style.top = (y - cords.top) + "px"; // Posicionamos nuestro div.ripple
+			ripple.style.left = (x - cords.left) + "px"; // Posicionamos nuestro div.ripple
+			ripple.style.animation = "ripple 1s"; // Agregamos animacion con Keyframes 
+
+			// Restauramos el elemento
+			setTimeout(function(){
+				ripple.style.top = 0 + "px";
+				ripple.style.left = 0 + "px";
+				ripple.style.animation = "none";
+			},1000);
+		}
+
 	})
 })()
