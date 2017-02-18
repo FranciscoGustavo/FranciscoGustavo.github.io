@@ -20,8 +20,8 @@
 						%p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 					.login
 						.options
-							%p Iniciar sesion
-							%p.inactive Registrate
+							%p.signIn Iniciar sesion
+							%p.signUp.inactive Registrate
 						.controls
 							.sign_in
 								%form
@@ -54,7 +54,7 @@
 				.no-important
 					.courses
 						.header
-							%a.botton Ver mas
+							%a.botton{href:"#"} Ver mas
 							%h3 Cursos
 						.container
 							.item.1
@@ -66,7 +66,7 @@
 
 					.articles
 						.header
-							%a.botton Ver mas
+							%a.botton{href:"#"} Ver mas
 							%h3 Articulos
 						.container
 							.item.1
@@ -75,4 +75,4 @@
 								%h4 Articulo 2
 							.item.3
 								%h4 Articulo 3
-
+		%script{src:"dist/app.js"}						

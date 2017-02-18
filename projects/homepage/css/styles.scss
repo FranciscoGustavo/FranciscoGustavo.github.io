@@ -92,7 +92,7 @@ button, .botton{
 
 .main{
 	width: 90%;
-	max-width: 1320px;
+	max-width: 900px;
 	margin: auto;
 }
 
@@ -101,6 +101,8 @@ button, .botton{
 }
 
 .important{
+	border-bottom: 2px solid #FFF;
+	margin-bottom: 20px;
 
 	.start{
 		background: #FFF;
@@ -135,6 +137,7 @@ button, .botton{
 				padding: 20px;
 				color: #FFF;
 				background: $primary-color;
+				cursor: pointer;	
 			}
 			.inactive{
 				font-weight: normal;
@@ -149,6 +152,7 @@ button, .botton{
 				position: relative;
 				width: 100%;
 				padding: 20px;
+				transition: all .1s;
 
 				&.inactive{
 					width: 0;
@@ -184,8 +188,7 @@ button, .botton{
 					}
 				}
 				.input-button{
-					position: relative;
-					top: 35px;
+					margin-top: 15px;
 					display: flex;
 					justify-content: space-between;
 					align-items: center;
@@ -206,11 +209,18 @@ button, .botton{
 }
 
 .no-important{
+	.courses{
+		padding-bottom: 20px;
+	}
+	.articles{
+		padding-bottom: 50px;
+	}
+
 	.courses, .articles{
 		.header{
 			display: flex;
 			justify-content: space-between;
-			padding: 5px 10px;
+			padding: 5px 25px;
 
 			.botton{
 				background: $second-color-darck;
@@ -220,7 +230,9 @@ button, .botton{
 			h3{
 				background: rgba(0,0,0,.3);
 				color: #FFF;
-				padding: 10px 20px;
+				padding: 10px 50px;
+				display: flex;
+				align-items: center;
 			}
 		}
 
@@ -251,7 +263,8 @@ button, .botton{
 	}
 	.start, .login{
 		margin: auto;
-		max-width: 400px;
+		width: 45%;
+		height: 300px;
 	}
 	.login{
 		margin-top: 0 !important;
