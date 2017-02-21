@@ -3,9 +3,9 @@
 	%head
 		%meta{charset:"UTF-8"}
 		%title HomePage
-		%link{rel:"stylesheet", href:"css/normalize.css"}
 		%meta{content:"Aprende estudiando en la mejor escuela de internet.", name:"description"}
-		%meta{content:"width=device-width, initial-scale=1", name:"viewport"}
+		%meta{content:"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no", name:"viewport"}
+		%link{rel:"stylesheet", href:"css/normalize.css"}
 		%link{href:"https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i", rel:"stylesheet"}
 		%link{href:"https://fonts.googleapis.com/icon?family=Material+Icons", rel:"stylesheet"}
 		%script{src:"dist/modernizr-2.8.3.min.js"}
@@ -21,13 +21,13 @@
 					.login.box-shadow
 						%h2 Iniciar sesion
 						.sign_in
-							%form{name:"sign_in"}
+							%form{name:"sign_in",method:'POST', action:""}
 								.input-group
 									%input{type:"email", id:"email-sign-in", name:"email"}
-									%label.label{for:"email-sign-in"} Correo
+									%label{for:"email-sign-in"} Correo
 								.input-group
 									%input{type:"password", id:"password-sign-in", name:"password"}
-									%label.label{for:"password-sign-in"} Contraseña
+									%label{for:"password-sign-in"} Contraseña
 								.input-chekbox
 									%input{type:"checkbox", id:"mantener-activa--sesion", name:"activa"}
 									%label{for:"mantener-activa--sesion"} No cerrar sesión

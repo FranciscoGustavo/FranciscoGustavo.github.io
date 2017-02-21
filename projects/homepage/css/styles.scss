@@ -36,11 +36,11 @@ input{
 	}
 }
 
+/*Helpers*/
 .box-shadow{
 	box-shadow: 0 0 5px rgba(0,0,0,.5);
 	border-radius: 2px;
 }
-
 
 button, .botton{
 	position: relative;
@@ -173,7 +173,17 @@ button, .botton{
 						opacity: .8;
 					}
 				}
+				&.error{
+					input{
+						border-bottom: 2px solid red;
+					}
+
+					label{
+						color: red;
+					}
+				}
 			}
+
 			.input-chekbox{
 				padding: 35px 0 20px 0;
 				input{
@@ -191,6 +201,7 @@ button, .botton{
 				label{
 					position: relative;
 					padding: 10px 20px 10px 55px;
+					border-radius: 2px;
 					font-size: 1.2em;
 					font-weight: bold;
 					text-align: center;
@@ -205,7 +216,16 @@ button, .botton{
 						width: 20px;
 						height: 20px;
 						border-radius: 50%;
-						border: 3px solid #222;
+						border: 3px solid $second-color;
+					}
+				}
+				&.error-checked{
+					label{
+						color: rgb(211, 47, 47);
+						background: rgba(211, 47, 47, .1);
+						&:before{
+							border-color: rgb(211, 47, 47);
+						}
 					}
 				}
 			}
