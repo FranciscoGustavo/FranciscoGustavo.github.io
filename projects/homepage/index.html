@@ -8,81 +8,57 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
     <script src="dist/modernizr-2.8.3.min.js"></script>
+    <link href="css/styles.css" rel="stylesheet">
     <script src="dist/app.js"></script>
   </head>
   <body>
     <div class="content">
       <div class="main">
         <div class="important">
-          <div class="start">
+          <div class="start box-shadow">
             <h1>Biblioteca Geek</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Bienvenido, continua aprendiendo en nuestra comunidad de programadores, recuerda que para recibir todos los beneficion de la plataformaa iniciar sesion o crearte una cuenta</p>
           </div>
-          <div class="login">
-            <div class="options">
-              <p class="signIn">Iniciar sesion</p>
-              <p class="signUp inactive">Registrate</p>
-            </div>
-            <div class="controls">
-              <div class="sign_in">
-                <form>
-                  <div class="input-group">
-                    <input id="email-sign_in" name="email" type="email">
-                    <label class="label active" for="email-sign_in">Correo</label>
-                  </div>
-                  <div class="input-group">
-                    <input id="password-sign_in" type="text">
-                    <label class="label" for="password-sign_in">Contraseña</label>
-                  </div>
-                  <div class="input-button">
-                    <a href="#">Ingresa con facebook</a>
-                    <button type="submit">Entrar</button>
-                  </div>
-                </form>
-              </div>
-              <div class="sign_up inactive">
-                <form>
-                  <div class="input-group">
-                    <input id="name-sign_in" name="nombre" type="text">
-                    <label class="label active" for="name-sign_in">Nombre:</label>
-                  </div>
-                  <div class="input-group">
-                    <input id="email-sign_in" type="email">
-                    <label class="label" for="email-sign_in">Correo</label>
-                  </div>
-                  <div class="input-group">
-                    <input id="password-sign_in" type="text">
-                    <label class="label" for="password-sign_in">Contraseña</label>
-                  </div>
-                  <div class="input-group">
-                    <input id="repet_password-sign_in" type="text">
-                    <label class="label" for="repet_password-sign_in">Confirmar contraseña</label>
-                  </div>
-                  <div class="input-button">
-                    <a href="#">Ingresa con facebook</a>
-                    <button type="submit">Crear cuenta</button>
-                  </div>
-                </form>
-              </div>
+          <div class="login box-shadow">
+            <h2>Iniciar sesion</h2>
+            <div class="sign_in">
+              <form name="sign_in">
+                <div class="input-group">
+                  <input id="email-sign-in" name="email" type="email">
+                  <label class="label" for="email-sign-in">Correo</label>
+                </div>
+                <div class="input-group">
+                  <input id="password-sign-in" name="password" type="password">
+                  <label class="label" for="password-sign-in">Contraseña</label>
+                </div>
+                <div class="input-chekbox">
+                  <input id="mantener-activa--sesion" name="activa" type="checkbox">
+                  <label for="mantener-activa--sesion">No cerrar sesión</label>
+                </div>
+                <div class="input-button">
+                  <a href="#">Ingresa con facebook</a>
+                  <button type="submit">Entrar</button>
+                </div>
+                <a class="sign_up" href="#">O crea tu cuenta aqui</a>
+              </form>
             </div>
           </div>
         </div>
-        <div class="no-important">
+        <div class="no-important box-shadow">
           <div class="courses">
             <div class="header">
               <a class="botton" href="#">Ver mas</a>
               <h3>Cursos</h3>
             </div>
             <div class="container">
-              <div class="item 1">
+              <div class="item">
                 <h4>Curso 1</h4>
               </div>
-              <div class="item 2">
+              <div class="item">
                 <h4>Curso 2</h4>
               </div>
-              <div class="item 3">
+              <div class="item">
                 <h4>Curso 3</h4>
               </div>
             </div>
@@ -93,13 +69,13 @@
               <h3>Articulos</h3>
             </div>
             <div class="container">
-              <div class="item 1">
+              <div class="item">
                 <h4>Articulo 1</h4>
               </div>
-              <div class="item 2">
+              <div class="item">
                 <h4>Articulo 2</h4>
               </div>
-              <div class="item 3">
+              <div class="item">
                 <h4>Articulo 3</h4>
               </div>
             </div>
@@ -107,6 +83,5 @@
         </div>
       </div>
     </div>
-    <script src="dist/app.js"></script>
   </body>
 </html>
