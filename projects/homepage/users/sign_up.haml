@@ -1,0 +1,45 @@
+!!!5
+%html{class:"no-js",lang:"es"}
+	%head
+		%meta{charset:"UTF-8"}
+		%title HomePage | Registrate
+		%meta{content:"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no", name:"viewport"}
+		%link{rel:"stylesheet", href:"css/normalize.css"}
+		%link{href:"https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i", rel:"stylesheet"}
+		%link{href:"https://fonts.googleapis.com/icon?family=Material+Icons", rel:"stylesheet"}
+		%script{src:"dist/modernizr-2.8.3.min.js"}
+		%link{rel:"stylesheet", href:"../css/styles.css"}
+		%link{rel:"stylesheet", href:"styles.css"}
+		%script{src:"../dist/app.js"}
+	%body
+		.content
+			.text
+				%p Para registrarte lo puedes hacer usando tu facebook o llenando un pequeño formulario
+			.main.box-shadow
+				%a.facebook{href:"#"} Registrarme con facebook
+				.sign_up
+					%form{name:"sign_up"}
+						.input-group
+							%input{type:"text", id:"nombre-sign-up", name:"nombre"}
+							%label{for:"email-sign-in"} Nombre
+						.input-group
+							%input{type:"email", id:"email-sign-up", name:"email"}
+							%label{for:"email-sign-in"} Correo
+						.input-group
+							%input{type:"password", id:"password-sign-up", name:"password"}
+							%label{for:"password-sign-in"} Contraseña
+						.input-group
+							%input{type:"password", id:"password-sign-up", name:"password"}
+							%label{for:"password-sign-in"} Confirmar Contraseña
+						.input-radio
+							%input{type:"radio", id:"hombre", name:"activa"}
+							%label{for:"hombre"} Hombre
+							%input{type:"radio", id:"mujer", name:"activa"}
+							%label{for:"mujer"} Mujer
+						.input-chekbox
+							%input{type:"checkbox", id:"mantener-activa--sesion", name:"activa"}
+							%label{for:"mantener-activa--sesion"} Terminos y condicines
+						.input-button
+							%a{href:"#"} Ingresa con facebook
+							%button{type:"submit"} Entrar
+						%a.sign_up{href:"../index.html"}Iniciar sesión

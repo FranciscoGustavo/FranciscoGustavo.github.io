@@ -1,0 +1,159 @@
+$primary-color: #E91e63;
+$primary-color-darck: #C2185B;
+$second-color: #3F51B5;
+$second-color-darck: #303f9f;
+
+.content{
+	background: #FDFDFD;
+	padding-top: 20px;
+}
+
+.text{
+	width: 90%;
+	padding: 10px;
+	max-width: 500px;
+	margin: auto;
+	margin-bottom: 15px;
+	font-size: 1.5em;
+	text-align: center;
+}
+
+.main{
+	max-width: 500px;
+	margin: auto;
+	padding: 20px 10px;
+	.facebook{
+		display: block;
+		width: 90%;
+		max-width: 368px;
+		margin: auto;
+		margin-bottom: 20px;
+		padding: 15px;
+		background: $second-color;
+		font-weight: bold;
+		font-size: 1.2em;
+		color: #FFF;
+		text-align: center;
+	}
+	.sign_up{
+		width: 90%;
+		max-width: 368px;
+		margin: auto;
+		.input-group, .input-chekbox, .input-button{
+			position: relative;
+			width: 100%;
+		}
+		.input-group{
+			input{
+				width: 100%;
+				background: none;
+				padding: 25px 5px 5px 5px;
+				border-bottom: 2px solid $primary-color;
+				font-size: 1.1em;
+				font-weight: normal;
+				color: #222;	
+			}
+
+			label{
+				position: absolute;
+				margin-top: -30px;
+				margin-left: 10px;
+				font-size: 1.2em;
+				font-weight: bold;
+				color: $second-color-darck;
+				transition: all .4s;
+				&.active-label{
+					margin-top: -48px;
+					margin-left: 3px;
+					font-size: .8em;
+					opacity: .8;
+				}
+			}
+			&.error{
+				input{
+					border-bottom: 2px solid red;
+				}
+
+				label{
+					color: red;
+				}
+			}
+		}
+		.input-chekbox, .input-radio{
+			padding: 35px 0 20px 0;
+			input{
+				display: none;
+				&:checked + label{
+					background: $second-color;
+					padding: 10px 20px 10px 20px;
+					color: #FFF;
+					&:before{
+						display: none;
+					}
+				}
+			}
+
+			label{
+				position: relative;
+				padding: 10px 20px 10px 55px;
+				border-radius: 2px;
+				font-size: 1.2em;
+				font-weight: bold;
+				text-align: center;
+				color: $second-color;
+				transition: all .4s;
+				cursor: pointer;
+				&:before{
+					content: '';
+					position: absolute;
+					top: 9px;
+					left: 20px;
+					width: 20px;
+					height: 20px;
+					border-radius: 50%;
+					border: 3px solid $second-color;
+				}
+			}
+			&.error-checked{
+				label{
+					color: rgb(211, 47, 47);
+					background: rgba(211, 47, 47, .1);
+					&:before{
+						border-color: rgb(211, 47, 47);
+					}
+				}
+			}
+		}
+		.input-radio{
+			padding: 35px 0 0 0;
+		}
+		.input-button{
+			display: flex;
+			justify-content: space-around;
+			padding: 0 10px;
+			margin-top: 8px;
+			margin-bottom: 20px;
+			font-size: 1.1em;
+			font-weight: bold;
+			a{
+				display: flex;
+				align-items: center;
+				text-align: center;
+				color: $primary-color-darck;
+			}
+			button{
+				background: $second-color;
+				color: #FFF;
+			}
+		}
+		a.sign_up{
+				display: block;
+				font-size: 1.05em;
+				text-align: center;
+				padding: 10px 20px;
+				background: $primary-color;
+
+				color: #FFF;
+			}
+	}
+}
