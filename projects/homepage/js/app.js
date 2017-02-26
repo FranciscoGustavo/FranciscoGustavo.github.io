@@ -26,7 +26,7 @@
 	window.addEventListener("load",function(){
 
 		// variables
-		form =  document.sign_in;
+		form =  document.sign_up;
 		elementsForm = form.elements;
 
 		// funciones
