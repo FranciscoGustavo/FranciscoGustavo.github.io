@@ -26,8 +26,9 @@
 	window.addEventListener("load",function(){
 
 		// variables
-		form =  document.sign_up;
+		form =  document.body.getElementsByTagName('form')[0];
 		elementsForm = form.elements;
+
 
 		// funciones
 		addClassActiveLabel = function(){
