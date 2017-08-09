@@ -1,0 +1,27 @@
+html, body {
+	margin: 0;
+	font-family: Arial, Helvetica;
+}
+
+.hero-images {
+	height: 75vh;
+	background: url('background.jpeg'), black; 
+	background-size: cover;
+	background-position: center;
+	padding: 2em;
+	color: #FFF;
+	display: flex;
+	align-items: flex-end;
+	padding-bottom: 5%;
+}
+
+.hero-images h1 {
+	font-size: 72px;
+	margin: 0px; 
+	text-shadow: 0 0 4px #000;
+}
+
+.hero-images p {
+	font-size: 24px;
+	text-shadow: 0 0 2px #000;
+}
