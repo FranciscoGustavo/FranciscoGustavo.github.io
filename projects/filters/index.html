@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Filters</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<div class="container">	
+		<nav>
+			<button type="button" data-filter="all">Todos</button>
+			<button type="button" data-toggle=".mobile">Android</button>
+			<button type="button" data-toggle=".web">Web</button>
+			<button type="button" data-toggle=".general">Generales</button>
+		</nav>
+
+		<div class="card mix mobile">
+			Curso de android
+		</div>
+
+		<div class="card mix web">
+			Curso de Ruby On Rails
+		</div>
+
+		<div class="card mix web">
+			Curso de HTML5
+		</div>
+
+		<div class="card mix general">
+			Curso de base de datos
+		</div>
+	</div>
+	<script src="mixitup.min.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>

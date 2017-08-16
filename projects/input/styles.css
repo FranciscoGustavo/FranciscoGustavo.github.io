@@ -1,0 +1,14 @@
+.input-form {
+	position: relative;
+}
+
+.input-form input {
+	width: 100%;
+	border: none;
+	padding: 8px 0px;
+	border-bottom: solid 1px #bdbdbd; 
+}
+
+.input-form input:focus {
+	outline: none;
+}
