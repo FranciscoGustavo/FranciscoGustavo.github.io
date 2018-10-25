@@ -3,7 +3,7 @@ html(lang="en")
   head
     include includes/head.pug
     +head('NextParty')
-  body
+  body(data-page = "index")
     include includes/header_index.pug
 
     .container-fluid.first-section
@@ -35,6 +35,6 @@ html(lang="en")
             h3 Titulo de ofertas
             h4 Subtitulo de oferta
             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, alias necessitatibus in deserunt quae quod rerum, deleniti recusandae eaque libero, hic quibusdam vitae laudantium tempora suscipit sit labore placeat dolores?
-          img(alt='' src='/public/partyelegant.jpg')
+          img(alt='' src='./../public/partyelegant.jpg')
     
     include includes/footer.pug
