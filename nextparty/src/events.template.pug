@@ -1,0 +1,48 @@
+doctype html
+html(lang="en")
+    head
+        include includes/head.pug
+        +head('Eventos - NextParty')
+    body
+        include includes/header_pages.pug
+
+        .container-fluid.events-slide
+            .container
+                .slide
+                    .info
+                        p.time 10 de Marzo
+                        h2.title Tommorrowland
+                        p.description El evento mas grande del mundo
+                        p.descuento Descuento del 20%
+    
+
+        .container-fluid.events
+            .container
+                .events-container
+                    include includes/card_event.pug
+                    each val, index in ['1', '2']
+                        .row
+                            each val, index in ['1', '2', '3']
+                                +cardEvent
+
+        .container-fluid.another-events
+            .container
+                .container-another
+                    .big-cards
+                        include includes/big_card_event.pug
+                        each val, index in ['1', '2', '3']
+                            +bigCardEvent
+                    .list-cards
+                        include includes/list_card_event.pug
+                        each val, index in [1,2,3,4,5,6,7,8,9]
+                            +listCardEvent
+
+        .container-fluid.events
+            .container
+                .events-container
+                    include includes/card_event.pug
+                    .row
+                        each val, index in ['1', '2', '3']
+                            +cardEvent
+        
+        include includes/footer.pug

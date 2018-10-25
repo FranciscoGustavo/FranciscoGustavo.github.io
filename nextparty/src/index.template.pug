@@ -1,0 +1,40 @@
+doctype html
+html(lang="en")
+  head
+    include includes/head.pug
+    +head('NextParty')
+  body
+    include includes/header_index.pug
+
+    .container-fluid.first-section
+      .container
+        .paragraph Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum nesciunt harum sequi iure velit voluptates blanditiis nisi tenetur ex? Repellendus vitae dolor omnis ad sunt molestiae vero odit, aspernatur laboriosam.
+
+    .container-fluid.pakages
+      .container
+        .row
+          .card
+            i.fas.fa-gift
+            h2 Paquetes
+            p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem molestiae at itaque,
+
+          .card
+            i.fas.fa-ticket-alt
+            h2 Boletos
+            p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem molestiae at itaque,
+
+          .card
+            i.fas.fa-store
+            h2 Lugares
+            p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem molestiae at itaque,
+
+    .container-fluid.slide
+      .container
+        .slide-container
+          .paragraph
+            h3 Titulo de ofertas
+            h4 Subtitulo de oferta
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, alias necessitatibus in deserunt quae quod rerum, deleniti recusandae eaque libero, hic quibusdam vitae laudantium tempora suscipit sit labore placeat dolores?
+          img(alt='' src='/public/partyelegant.jpg')
+    
+    include includes/footer.pug

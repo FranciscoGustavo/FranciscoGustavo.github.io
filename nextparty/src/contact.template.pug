@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+    head
+        include includes/head.pug
+        +head('Contactanos - NextParty')
+    body
+        include includes/header_pages.pug
+
+        
+        .container-fluid.contact
+            .container
+                h2 Envianos un mensaje
+                .form-container
+                    form#formContact
+                        .input-form
+                            label(for="name") Nombre*
+                            input(id="name" type="text")
+
+                        .input-form
+                            label(for="email") Correo*
+                            input(id="email" type="email")
+
+                        .input-form
+                            label(for="comment") Escribe tu comentario*
+                            textarea(name="comment" id="comment")
+
+                        .input-send
+                            input(type="submit" value="Enviar")
+
+        include includes/footer.pug
