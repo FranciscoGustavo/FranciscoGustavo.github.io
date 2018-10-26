@@ -1,0 +1,39 @@
+doctype html
+html(lang="en")
+    head
+        include includes/head.pug
+        +head('FacilitoRetro')
+    body
+        .container-fluid
+            .container
+                header.head
+                    .headerimage
+                        .paragraph
+                            img(src="./../public/logo.png", alt="")
+                            h1 Programar es el futuro_
+                            p Aprende desde tu casa con más de 195 cursos online prácticos.
+                        img(src="./../public/cody.png", alt="")
+                    nav
+                        a(href="") Inicio
+                        a(href="") Cursos
+                        a(href="") Talleres
+                        a(href="") Comunidades
+                        a(href="") Articulos
+                        a(href="") Mi Perfil
+                
+                .slide
+                    button.arrow.arrow-left <
+                    button.arrow.arrow-right >
+                    img(src="./../public/office.jpg", alt="")
+
+                
+                .body
+                    .login
+                        .form.singin
+                            form(action="")
+                                .input-form
+                                    label(for="email") Correo Electronico:
+                                    input(type="email" id="email" name="email")
+                                .input-form
+                                    label(for="password") Contraseña:
+                                    input(type="password", id="password" name="password")
