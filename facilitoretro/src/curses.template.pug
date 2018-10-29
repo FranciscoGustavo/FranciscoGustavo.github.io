@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+    head
+        include includes/head.pug
+        +head('FacilitoRetro')
+    body.curses-page(data-page="curses-page")
+        .container-fluid
+            .container
+                header.head
+                    include includes/cover.pug
+                    include includes/menu.pug
+                
+                .body
+                    .login
+                        include includes/curses/curses.pug
+                    .body-container
+                        h1 Base De Datos
+                        .curses
+                            each val in [1, 2, 3, 4]
+                                include includes/curses/curse_card.pug
+
+
+
+                include includes/footer.pug

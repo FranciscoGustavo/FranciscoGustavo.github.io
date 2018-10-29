@@ -7,6 +7,36 @@ const index = new HtmlWebpackPlugin({
   filename: 'index.html'
 })
 
+const curses = new HtmlWebpackPlugin({
+  title: 'NextParty',
+  template: './src/curses.template.pug',
+  filename: 'curses.html'
+})
+
+const workshops = new HtmlWebpackPlugin({
+  title: 'NextParty',
+  template: './src/workshops.template.pug',
+  filename: 'workshops.html'
+})
+
+const communities = new HtmlWebpackPlugin({
+  title: 'NextParty',
+  template: './src/communities.template.pug',
+  filename: 'communities.html'
+})
+
+const articles = new HtmlWebpackPlugin({
+  title: 'NextParty',
+  template: './src/articles.template.pug',
+  filename: 'articles.html'
+})
+
+const profile = new HtmlWebpackPlugin({
+  title: 'NextParty',
+  template: './src/profile.template.pug',
+  filename: 'profile.html'
+})
+
 
 module.exports = {
   mode: 'development',
@@ -17,7 +47,12 @@ module.exports = {
     filename: 'dist/javascript/bundle.js'
   },
   plugins: [
-    index
+    index, 
+    curses,
+    workshops,
+    communities,
+    articles,
+    profile
   ],
   module: {
     rules: [

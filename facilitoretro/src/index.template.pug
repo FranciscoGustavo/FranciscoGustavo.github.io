@@ -3,32 +3,25 @@ html(lang="en")
     head
         include includes/head.pug
         +head('FacilitoRetro')
-    body
+    body(data-page="index-page")
         .container-fluid
             .container
                 header.head
-                    .headerimage
-                        .paragraph
-                            img(src="./../public/logo.png", alt="")
-                            h1 Programar es el futuro_
-                            p Aprende desde tu casa con más de 195 cursos online prácticos.
-                        img(src="./../public/cody.png", alt="")
-                    nav
-                        a(href="") Inicio
-                        a(href="") Cursos
-                        a(href="") Talleres
-                        a(href="") Comunidades
-                        a(href="") Articulos
-                        a(href="") Mi Perfil
+                    include includes/cover.pug
+                    include includes/menu.pug
                 
                 .slide
                     button.arrow.arrow-left <
                     button.arrow.arrow-right >
                     img(src="./../public/office.jpg", alt="")
+                    .paragraph
+                        h1 Aprende Java desde cero
+                        button.seemore Ver Curso
 
                 
                 .body
                     .login
+                        h2 Ingresa y aprende
                         .form.singin
                             form(action="")
                                 .input-form
@@ -37,3 +30,27 @@ html(lang="en")
                                 .input-form
                                     label(for="password") Contraseña:
                                     input(type="password", id="password" name="password")
+                                .input-submit
+                                    input(type="submit" value="INGRESAR")
+                        include includes/index/tolearn.pug
+                        include includes/index/specialties.pug
+
+
+
+                    .body-container
+                        h1 ¡HOLA DE PARTE DE CÓDIGOFACILITO!
+                        .container-video
+                            .video-youtube
+                                iframe(src="https://www.youtube.com/embed/ywnkDldgkCA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
+                        .actions
+                            h2 Registrate y estudia con nosotros
+                            button.create cuenta gratis
+                            button.update Actualiza a premium
+                        .curse
+                            h3 Nuevos lanzamientos
+                            p Estos son nuestros cursos mas recientes.
+                            .row
+                                each val in [1, 2, 3]
+                                    include includes/curses/curse_card.pug
+
+                include includes/footer.pug
