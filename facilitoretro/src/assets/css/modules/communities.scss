@@ -1,0 +1,65 @@
+.publications {
+    max-height: 720px;
+    margin: 2rem 0;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.card-profile {
+    text-align: center;
+
+    img {
+        width: 90%;
+        max-width: 250px;
+        max-height: 250px;
+        border-radius: 50%;
+        margin: auto;
+    }
+
+    p {
+        margin: 0.5rem 0;
+        font-size: 1.5rem;
+    }
+
+    .profile-info {
+        font-size: 0;
+        letter-spacing: 0;
+
+        .profile-publications, .profile-points {
+            display: inline-block;
+            width: 60%;
+            p {
+                font-size: 1.2rem;
+                letter-spacing: 2px;
+            }
+        }
+
+        .profile-points {
+            width: 40%;
+        }
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .card-profile {    
+        .profile-info {
+            .profile-publications, .profile-points {
+                p {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 820px) {
+    .card-profile {    
+        .profile-info {
+            .profile-publications, .profile-points {
+                p {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+}

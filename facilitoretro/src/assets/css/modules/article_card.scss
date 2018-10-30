@@ -95,3 +95,121 @@ article.curse-card {
     }
 
 }
+
+
+.card-workshop {
+    width: 95%;
+    max-width: 300px;
+    margin: auto;
+    margin-top: 2rem;
+    border: 1px solid #dddfe2;
+    padding: 1rem;
+    h2 {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .see-more {
+        text-align: center;
+        a{
+            display: inline-block;
+            border: solid 2px #b79f00;
+            border-radius: 3px;
+            padding: 0.5rem 1rem;
+            margin-top: 1rem;
+            background-image: linear-gradient(#F8E352, #bcab3e);
+            color: #111;
+        }
+    }
+}
+
+@media screen and (min-width:720px){
+    .card-workshop {
+        display: inline-block;
+        width: 30%;
+        max-width: 300px;
+        margin-right: 4%;
+    }
+
+    .see-more a {
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+}
+
+.card-publication {
+    width: 95%;
+    max-width: 500px;
+    border: 1px solid #dddfe2;
+    padding: 1rem;
+    margin: auto;
+    margin-top: 2rem;
+
+    .card-header {
+        padding-bottom: 1rem;
+        img, h3 {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        h3 {
+            width: 50%;
+            margin-left: 1rem;
+        }
+    }
+
+    .card-body {
+        padding-left: 30px;
+        padding-bottom: 1rem;
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 0.5rem;
+            resize: none;
+            outline: none;
+            font-size: 1rem;
+            letter-spacing: 2px;
+        }
+    }
+
+    .card-footer {
+        text-align: right;
+
+        button {
+            text-transform: uppercase;
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
+
+            &.like {
+                border: solid 2px #b79f00;
+                background-image: linear-gradient(#F8E352, #bcab3e);
+                margin-right: 1rem;
+            }
+
+            &.to-comment {
+                border: solid 2px #004c3b;
+                background-image: linear-gradient(#1BBC9B, #0e725d);
+                color: #FFF;
+            }
+        
+        }
+    }
+}
+
+@media screen and (min-width: 720px){
+    .card-publication {
+        .card-footer {
+            button {
+                padding: 0.5rem 1.5rem;
+            }
+        }
+    }
+}

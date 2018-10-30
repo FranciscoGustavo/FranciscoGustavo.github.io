@@ -1,0 +1,32 @@
+.login
+    .card-profile
+        img(src="./../public/perfil.jpg", alt="")
+        p @Frank_Tavoo
+        .profile-info
+            .profile-publications
+                p Publicaciones
+                p 18
+            .profile-points
+                p Puntos
+                p 32
+    .list
+        h3 Tus Comunidades
+        ul
+            each val in [1,2,3,4]
+                li Javascripts
+    .more-communities
+        button.btn-more-communities Mas Comunidades
+.body-container
+    .new-comment
+        .card-publication
+            .card-header
+                img(src="./../public/perfil.jpg", alt="")
+                h3 @Frank_Tavoo
+            .card-body
+                textarea(name="" placeholder="Escribe Algo")
+            .card-footer
+                button.to-comment Comentar
+    .publications
+        .row
+            each val in [1, 2, 3, 1, 2, 3, 1, 2, 3]
+                include card_publication.pug

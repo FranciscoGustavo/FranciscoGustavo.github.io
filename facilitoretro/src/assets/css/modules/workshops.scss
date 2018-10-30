@@ -1,0 +1,85 @@
+body[data-page="workshops-page"] .container-fluid .container .body .body-container {
+    width: 100%;
+    
+    .countdown {
+        background-color: #92D4F2;
+        padding-bottom: 3rem;
+
+        h1 {
+            padding: 2.5rem 0;
+            margin: 0;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+        }
+
+        .count-down {
+            text-align: center;
+            font-size: 4rem;
+        }
+
+    }
+
+    .workshop {
+        width: 95%;
+        max-width: 300px;
+        border: 1px solid #dddfe2;
+        padding: 1rem;
+        margin: auto;
+        margin-top: 2rem;
+
+        h2 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+    }
+
+    .workshops {
+        padding: 1rem 0 2rem 0;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    body[data-page="workshops-page"] .container-fluid .container .body .body-container {
+
+        .countdown {
+            padding-bottom: 4rem;
+    
+            h1 {
+                padding: 4rem 0;
+                font-size: 3rem;
+            }
+    
+            .count-down {
+                font-size: 9rem;
+            }
+    
+        }
+
+        .workshops {
+            font-size: 0;
+            letter-spacing: 0;
+
+            .card-workshop {
+                &:first-child {
+                    margin-left: 1%;
+                }
+
+                &:last-child {
+                    margin-right: 1%;
+                    
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 920px) {
+    body[data-page="workshops-page"] .container-fluid .container .body .body-container {
+        .countdown {  
+            .count-down {
+                font-size: 12rem;
+            }
+        }
+    }
+}

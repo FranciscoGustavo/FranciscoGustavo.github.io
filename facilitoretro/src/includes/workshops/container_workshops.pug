@@ -1,0 +1,18 @@
+.body-container
+    .countdown
+        h1 Proximo taller en vivo
+        .count-down
+            span.hour 00
+            span.dobluepoint :
+            span.minutes 00
+            span.dobluepoint :
+            span.seconds 00
+        .workshop
+            h2 Crear bots en mesenger
+            img(src="./../public/botsmessenger.jpg", alt="")
+
+    .workshops
+        each val in [1, 2, 3]
+            .row
+                each val in [1, 2, 3]
+                    include card_workshop.pug
