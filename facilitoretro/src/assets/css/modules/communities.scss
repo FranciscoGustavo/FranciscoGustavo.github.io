@@ -40,6 +40,18 @@
     }
 }
 
+.more-communities {
+    text-align: center;
+
+    .btn-more-communities {
+        border: solid 2px #b79f00;
+        border-radius: 3px;
+        margin: 1rem 0 0 0;
+        background-image: linear-gradient(#F8E352, #bcab3e);
+        text-transform: uppercase;
+    }
+}
+
 @media screen and (min-width: 720px) {
     .card-profile {    
         .profile-info {
