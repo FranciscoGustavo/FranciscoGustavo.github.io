@@ -1,0 +1,44 @@
+.profile-section
+    h2 Perfil
+    .profile-public
+        img(src="./../public/perfil.jpg", alt="")
+        .info
+            h3 @Frank_Tavoo
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    .profile-private
+        .form.form-profile
+            form(action="")
+                .input-form
+                    label(for="") Username
+                    input(type="text" value="@Frank_Tavoo")
+                .input-form
+                    label(for="") Nombre
+                    input(type="text" value="Francisco Gustavo")
+                .input-form
+                    label(for="") Correo
+                    input(type="email" value="franktavoo@mail.com")
+                .input-form
+                    label(for="") Contraseña
+                    input(type="password" value="")
+                .input-submit
+                    input(type="submit" value="Guardar")
+.login
+    .list
+        ul 
+            li Mis Cusros
+            li.active Mis Articulos
+
+.body-container
+    .curses
+        .profile-post-header
+                h3 Titulo
+                p Estado
+                .actions
+                    p Acciones
+        each val in [1, 2, 3, 4, 1, 2, 3, 4]
+            .profile-post
+                h3 Lorem ipsum dolor sit amet consectetur adipisicing
+                p Publicado
+                .actions
+                    button.edit Editar
+                    button.delete Eliminar

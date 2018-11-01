@@ -16,8 +16,10 @@ html(lang="en")
                     .body-container
                         h1 Base De Datos
                         .curses
-                            each val in [1, 2, 3, 4]
-                                include includes/curses/curse_card.pug
+                            include includes/curses/curse_card.pug
+                            - var indexcurses = [['./../public/curses/sistema.jpg',"Crea un sistema de facturación"],['./../public/curses/html.jpg',"Aprende HTML desde cero"], ['./../public/curses/Facturacion.png',"Crea sitios web dinamicos con nodejs"],['./../public/curses/webapp.png',"Crea Progresive Web Apps con Angular"],['./../public/curses/computer.jpg',"Aprende a administrar sistemas linux"],['./../public/curses/testing.jpg',"Pruebas automatizadas en RoR"],['./../public/curses/seo.png',"Estrategias digitales de marketing"],['./../public/curses/cursojava.svg',"Aprende Java desde basico a avanzado"],['./../public/curses/logica.jpg',"Aprende tada la logica de programación"]]
+                            each val in indexcurses
+                                +curse_card(val)
 
 
 

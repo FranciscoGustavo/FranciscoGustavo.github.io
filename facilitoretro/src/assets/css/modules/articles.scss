@@ -1,6 +1,26 @@
 body[data-page="articles-page"] .container-fluid .container .body {
     .body-container {
         border-right: solid 3px #e8e8e9;
+
+        .search {
+            padding: 1rem;
+
+            label {
+                margin-right: 1rem;
+                font-size: 1.1rem;
+                text-transform: uppercase;
+            }
+
+            input {
+                border-radius: 3px;
+                border: 0;
+                border: solid 1px #525252;
+                outline: none;
+                padding: 0.25rem;
+                font-size: 1rem;
+            }
+        }
+
         .card-post {
             margin-top: 2rem;
             &:last-child {

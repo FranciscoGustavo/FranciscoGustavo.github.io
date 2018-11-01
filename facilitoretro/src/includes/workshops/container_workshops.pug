@@ -9,10 +9,12 @@
             span.seconds 00
         .workshop
             h2 Crear bots en mesenger
-            img(src="./../public/botsmessenger.jpg", alt="")
+            img(src="./../public/curses/logica.jpg", alt="")
 
     .workshops
         each val in [1, 2, 3]
             .row
-                each val in [1, 2, 3]
-                    include card_workshop.pug
+                include card_workshop.pug
+                - var indexcurses = [['./../public/curses/testing.jpg',"Crea un sistema de facturación"],['./../public/curses/webapp.png', "Aprende HTML desde cero"], ['./../public/curses/sistema.jpg', "Aprende Java desde basico a avanzado"]]
+                each val in indexcurses
+                    +card_workshop(val)

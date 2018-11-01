@@ -13,7 +13,7 @@ html(lang="en")
                 .slide
                     button.arrow.arrow-left <
                     button.arrow.arrow-right >
-                    img(src="./../public/office.jpg", alt="")
+                    img(src="./../public/slide/slide-1.jpg", alt="")
                     .paragraph
                         h1 Aprende Java desde cero
                         button.seemore Ver Curso
@@ -49,8 +49,10 @@ html(lang="en")
                         .curse
                             h3 Nuevos lanzamientos
                             p Estos son nuestros cursos mas recientes.
+                            - var indexcurses = [['./../public/curses/sistema.jpg',"Crea un sistema de facturación"],['./../public/curses/html.jpg',"Aprende HTML desde cero"], ['./../public/curses/Facturacion.png',"Crea sitios web dinamicos con nodejs"]]
                             .row
-                                each val in [1, 2, 3]
+                                each val in indexcurses
                                     include includes/curses/curse_card.pug
+                                    +curse_card(val)
 
                 include includes/footer.pug

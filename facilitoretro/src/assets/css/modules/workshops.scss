@@ -61,6 +61,7 @@ body[data-page="workshops-page"] .container-fluid .container .body .body-contain
             letter-spacing: 0;
 
             .card-workshop {
+                vertical-align: top;
                 &:first-child {
                     margin-left: 1%;
                 }

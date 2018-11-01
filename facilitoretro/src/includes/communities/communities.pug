@@ -12,8 +12,9 @@
     .list
         h3 Tus Comunidades
         ul
-            each val in [1,2,3,4]
-                li Javascripts
+            - var name = ["JavaScript","Android","Web","Base De Datos"]
+            each val in name
+                li= val
     .more-communities
         button.btn-more-communities Mas Comunidades
 .body-container

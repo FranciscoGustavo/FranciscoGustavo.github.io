@@ -1,5 +1,6 @@
-.card-workshop
-    h2 Crear bots en mesenger
-    img(src="./../public/botsmessenger.jpg", alt="")
-    .see-more
-        a(href="") Ver mas
+mixin card_workshop(element)
+    .card-workshop
+        h2= element[1]
+        img(src=element[0], alt="")
+        .see-more
+            a(href="") Ver mas

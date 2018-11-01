@@ -1,8 +1,15 @@
 .body-container
-    each val in [1, 2, 3, 4, 5, 6]
+    .search
+        label(for="") Buscar
+        input(type="text")
+    .posts
         include card_post.pug
+        - var indexcurses = ['./../public/curses/sistema.jpg', './../public/curses/html.jpg','./../public/curses/Facturacion.png', './../public/curses/webapp.png','./../public/curses/computer.jpg', './../public/curses/testing.jpg','./../public/curses/seo.png','./../public/curses/cursojava.svg','./../public/curses/logica.jpg']
+        each val in indexcurses
+            +card_post(val)
 .login
     h3 No te lo pierdas
-    each val in [1, 2, 3, 4, 5, 6]
-        include card_post_recomend.pug
-
+    include card_post_recomend.pug
+    - var indexcursestwo = ['./../public/curses/html.jpg','./../public/curses/seo.png','./../public/curses/Facturacion.png', './../public/curses/computer.jpg', './../public/curses/testing.jpg','./../public/curses/cursojava.svg', './../public/curses/sistema.jpg','./../public/curses/logica.jpg','./../public/curses/webapp.png']
+    each val in indexcursestwo
+        +card_post_recomend(val)
