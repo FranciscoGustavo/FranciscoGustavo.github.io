@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+@import './modules/variables.scss';
+@import './modules/cardProyects.scss';
+@import './modules/imageAndText.scss';
+@import './modules/proyects.scss';
+@import './modules/aboutme.scss';
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: 2px;
+}
+
+html, body {
+	font-size: 16px;
+}
+
+h1 {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	width: 100%;
+}
+
+button {
+	border: 0;
+	border-radius: 3px;
+	padding: 1rem;
+	outline: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.container-fluid, .container {
+	width: 100%;
+}
+
+.container {
+	max-width: 1000px; 
+	margin: auto;
+}
+
+header {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 100;
+	background-color: $primary-dark;
+	.menu {
+		font-size: 0;
+		letter-spacing: 0;
+
+		a {
+			display: inline-block;
+			width: 25%;
+			padding: 1rem 0;
+			color: $white;
+			text-align: center;
+
+			i {
+				font-size: 1.1rem;
+			}
+
+			span { display: none; }
+
+			&.active {
+				background-color: $secondary;
+				color: $black;
+			}
+
+			&:hover {
+				background-color: $white;
+				color: $secondary;
+			}
+		}
+	}
+
+}
+
+html, body { overflow: hidden; }
+
+.container-box, .slide, .proyects, .about-me {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	transition: all 0.2s;
+}
+
+.buttons-bar-down {
+	position: absolute;
+	bottom: 4.5rem;
+	display: flex;
+	justify-content: space-between;
+	width: 100vw;
+	padding: 0 1rem;
+	z-index: 100;
+}
+
+.bars {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 60%;
+
+	button {
+		width: 25%;
+		height: 10px;
+		padding: 0;
+		background-color: $secondary-light;
+
+		&:first-child { background-color: $secondary; }
+	}
+}
+
+.arrow-left, .arrow-right {
+	display: flex;
+	align-items: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: $secondary;
+	color: $black;
+	font-size: 1.2rem;
+	cursor: pointer;
+	
+	&:before {
+		position: absolute;
+	}
+	
+}
+
+.arrow-right{
+	right: 3px;
+}
+
+.arrow-left {
+	left: 3px;
+	justify-content: center;
+}
+
+.slide {
+	left: 0%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background-image: url('/public/slide-1.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	button {
+		display: none;
+	}
+
+	.text {
+		margin-top: -4rem; 
+		padding: 0 1rem;
+		color: $white;
+		text-align: center;
+
+		h1 {
+			margin-bottom: 0.8rem;
+		}
+
+		p {
+			font-size: 1.2rem;
+		}
+	}
+}
+
+.proyects {
+	top: -100%;
+	left: 100%;
+	padding: 1rem 0 4.5rem 0;
+	background-color: $primary;
+}
+
+
+.about-me {
+	top: -200%;
+	left: -100%;
+	padding: 1rem 0;
+	background-color: $primary-light;
+
+	.card-profile {
+		padding: 0 1rem;
+
+		h3 {
+			color: $white;
+			text-align: center;
+			font-size: 1.4rem;
+			margin-bottom: 1rem;
+		}
+
+	}
+
+	.video {
+		padding: 0 1rem;
+		margin-top: 1rem;
+	}
+}
+
+.container-video {
+	position: relative;
+	height: 0;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	overflow: hidden;
+
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+}
+
+.footer {
+	padding: 3rem 0;
+	background-color: $primary-light;
+
+	.row {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	.brand h1, .social-media a {
+		font-size: 2rem;
+		color: rgba($black, 0.9);
+	}
+
+}
+
+footer {
+	display: none;
+}
+
+@media screen and (min-width: 750px){
+	.slide, .proyects, .about-me {
+
+		padding-top: 5rem; 
+		.container {
+			width: 50%;
+			margin: auto;
+		}
+	}
+
+	.buttons-bar-down {
+		width: 50%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+@media screen and (min-width: 900px){
+	html, body {
+		overflow: auto;
+	}
+
+	header {
+		position: static;
+		text-align: center;
+		
+		background-color: #052232;
+		background-image: url("/public/slide-1.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		
+		.container:first-child {
+			max-width: unset;
+			padding: 2.5rem 0; 
+			background-color: rgba($primary-dark, 0.8);
+		}
+
+		.menu {
+			display: flex;
+			justify-content: space-between;
+			max-width: 1000px;
+			margin: auto;
+
+			a {
+				width: 20%;
+				border-radius: 3px;
+				padding: 0.5rem 1rem;
+				background-color: rgba($white, 0.3);
+				
+				span {
+					display: inline-block;
+					margin-left: 0.5rem;
+					font-size: 1rem;
+				}
+			}
+		}
+		
+		.container:last-child {
+			position: relative;
+			display: flex;
+			align-items: center;
+			min-height: 450px;
+			
+			button {
+				position: absolute;
+			}
+
+			.text {
+				max-width: 800px;
+				margin: auto;
+				padding: 0rem 7rem;
+				color: $white;
+				text-align: center;
+
+				h1 {
+					margin-bottom: 0.8rem;
+				}
+
+				p {
+					font-size: 1.2rem;
+				}
+			}
+
+		}
+
+	}
+
+	.container-box {
+		width: 100%;
+		height: auto;
+	}
+
+	.buttons-bar-down, .slide, .proyects, .about-me {
+		position: static;
+		width: 100%;
+		height: auto;
+		padding: 5rem 0;
+		
+		.container {
+			width: 100%;
+		}
+	}
+
+	.buttons-bar-down {
+		display: none;
+	}
+
+	.proyects {
+		background-color: $primary-dark;
+		.row {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			
+			.card-proyect {
+				width: 280px;
+				margin: unset;
+				padding: 0;
+				text-align: center;
+			}
+		}
+	}
+
+	.about-me {
+		background-color: $primary;
+		.row {
+			letter-spacing: 0;
+			font-size: 0;
+
+			.card-profile, .video {
+				display: inline-block;
+				vertical-align: top;
+			}
+
+			.card-profile {
+				width: 60%;
+				padding: 0;
+				letter-spacing: 2px;
+				font-size: 1rem;
+
+				h3 {
+					display: none;
+				}
+
+				figure {
+					width: 35%;
+				}
+
+				p { 
+					width: 65%;
+					padding: 0 1rem 0 1.5rem;
+					font-size: 1rem;
+				}
+			}
+
+			.video {
+				width: 40%;
+				margin-top: 0;
+				padding: 0;
+			}
+		}
+	}
+
+	.footer {
+		display: block;
+		padding: 3rem 0;
+	}
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        title Document
+    body(data-page='aboutme')
+        include includes/headerMenu.pug
+
+        .container-box.container-fluid.aboutme
+            h3 Desarrollador FrontEnd
+            .image-and-text
+                figure
+                    img(src="/public/my-profile.jpg", alt="")
+                .box-info
+                    p Francisco Gustavo Hidalgo López
+                    p Edad: 20Años
+            .buttons
+                button Descripcion
+                button Hobbies
+                button other
+            .box-details
+                .description
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa fuga exercitationem possimus sed nobis? Eveniet non amet officia cupiditate aspernatur necessitatibus illo illum consequatur? Atque nostrum voluptatem ipsam nam doloremque?
+
+
+        include includes/footer.pug
