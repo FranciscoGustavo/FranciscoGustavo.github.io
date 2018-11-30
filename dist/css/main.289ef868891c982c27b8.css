@@ -1,0 +1,360 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);.card-proyect {
+  padding: 0 1rem;
+  margin: auto;
+  margin-bottom: 1.5rem;
+  color: #FFF; }
+  .card-proyect h2, .card-proyect p {
+    margin-bottom: 0.5rem; }
+  .card-proyect a {
+    display: block;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    background-color: #eeb434;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center; }
+
+.image-and-text {
+  font-size: 0;
+  letter-spacing: 0; }
+  .image-and-text figure, .image-and-text p, .image-and-text .box-info {
+    display: inline-block;
+    vertical-align: top;
+    width: 45%; }
+  .image-and-text p, .image-and-text .box-info {
+    width: 55%;
+    padding-left: 0.5rem;
+    font-size: 0.8rem;
+    letter-spacing: 2px; }
+  .image-and-text .box-info p {
+    width: 100%;
+    font-size: 1rem; }
+    .image-and-text .box-info p:first-child {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem; }
+
+.proyects-page {
+  padding: 0rem 0 2.5rem 0;
+  background-color: white;
+  overflow: scroll; }
+  .proyects-page .card-proyect {
+    background-color: #5d7689;
+    color: black;
+    padding: 1rem;
+    margin-bottom: 2rem; }
+
+.aboutme {
+  padding: 1rem; }
+  .aboutme h3 {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.4rem; }
+  .aboutme .buttons {
+    margin: 2rem 0;
+    border: solid 1px gray;
+    border-radius: 25px;
+    text-align: center;
+    overflow: hidden; }
+    .aboutme .buttons button {
+      width: 30%;
+      border-left: solid 1px gray;
+      border-right: solid 1px gray;
+      border-radius: 0; }
+      .aboutme .buttons button:first-child {
+        width: 40%;
+        background-color: #eeb434; }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 2px; }
+
+html, body {
+  font-size: 16px; }
+
+h1 {
+  margin: 0; }
+
+a {
+  text-decoration: none; }
+
+img {
+  width: 100%; }
+
+button {
+  border: 0;
+  border-radius: 3px;
+  padding: 1rem;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer; }
+
+.container-fluid, .container {
+  width: 100%; }
+
+.container {
+  max-width: 1000px;
+  margin: auto; }
+
+header {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #052232; }
+  header .menu {
+    font-size: 0;
+    letter-spacing: 0; }
+    header .menu a {
+      display: inline-block;
+      width: 25%;
+      padding: 1rem 0;
+      color: #FFF;
+      text-align: center; }
+      header .menu a i {
+        font-size: 1.1rem; }
+      header .menu a span {
+        display: none; }
+      header .menu a.active {
+        background-color: #eeb434;
+        color: #000; }
+      header .menu a:hover {
+        background-color: #FFF;
+        color: #eeb434; }
+
+html, body {
+  overflow: hidden; }
+
+.container-box, .slide, .proyects, .about-me {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transition: all 0.2s; }
+
+.buttons-bar-down {
+  position: absolute;
+  bottom: 4.5rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  padding: 0 1rem;
+  z-index: 100; }
+
+.bars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%; }
+  .bars button {
+    width: 25%;
+    height: 10px;
+    padding: 0;
+    background-color: #ffe667; }
+    .bars button:first-child {
+      background-color: #eeb434; }
+
+.arrow-left, .arrow-right {
+  display: flex;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #eeb434;
+  color: #000;
+  font-size: 1.2rem;
+  cursor: pointer; }
+  .arrow-left:before, .arrow-right:before {
+    position: absolute; }
+
+.arrow-right {
+  right: 3px; }
+
+.arrow-left {
+  left: 3px;
+  justify-content: center; }
+
+.slide {
+  left: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/public/slide-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  .slide button {
+    display: none; }
+  .slide .text {
+    margin-top: -4rem;
+    padding: 0 1rem;
+    color: #FFF;
+    text-align: center; }
+    .slide .text h1 {
+      margin-bottom: 0.8rem; }
+    .slide .text p {
+      font-size: 1.2rem; }
+
+.proyects {
+  top: -100%;
+  left: 100%;
+  padding: 1rem 0 4.5rem 0;
+  background-color: #314a5c; }
+
+.about-me {
+  top: -200%;
+  left: -100%;
+  padding: 1rem 0;
+  background-color: #5d7689; }
+  .about-me .card-profile {
+    padding: 0 1rem; }
+    .about-me .card-profile h3 {
+      color: #FFF;
+      text-align: center;
+      font-size: 1.4rem;
+      margin-bottom: 1rem; }
+  .about-me .video {
+    padding: 0 1rem;
+    margin-top: 1rem; }
+
+.container-video {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  overflow: hidden; }
+  .container-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+.footer {
+  padding: 3rem 0;
+  background-color: #5d7689; }
+  .footer .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center; }
+  .footer .brand h1, .footer .social-media a {
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.9); }
+
+footer {
+  display: none; }
+
+@media screen and (min-width: 750px) {
+  .slide, .proyects, .about-me {
+    padding-top: 5rem; }
+    .slide .container, .proyects .container, .about-me .container {
+      width: 50%;
+      margin: auto; }
+  .buttons-bar-down {
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%); } }
+
+@media screen and (min-width: 900px) {
+  html, body {
+    overflow: auto; }
+  header {
+    position: static;
+    text-align: center;
+    background-color: #052232;
+    background-image: url("/public/slide-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+    header .container:first-child {
+      max-width: unset;
+      padding: 2.5rem 0;
+      background-color: rgba(5, 34, 50, 0.8); }
+    header .menu {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1000px;
+      margin: auto; }
+      header .menu a {
+        width: 20%;
+        border-radius: 3px;
+        padding: 0.5rem 1rem;
+        background-color: rgba(255, 255, 255, 0.3); }
+        header .menu a span {
+          display: inline-block;
+          margin-left: 0.5rem;
+          font-size: 1rem; }
+    header .container:last-child {
+      position: relative;
+      display: flex;
+      align-items: center;
+      min-height: 450px; }
+      header .container:last-child button {
+        position: absolute; }
+      header .container:last-child .text {
+        max-width: 800px;
+        margin: auto;
+        padding: 0rem 7rem;
+        color: #FFF;
+        text-align: center; }
+        header .container:last-child .text h1 {
+          margin-bottom: 0.8rem; }
+        header .container:last-child .text p {
+          font-size: 1.2rem; }
+  .container-box {
+    width: 100%;
+    height: auto; }
+  .buttons-bar-down, .slide, .proyects, .about-me {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 5rem 0; }
+    .buttons-bar-down .container, .slide .container, .proyects .container, .about-me .container {
+      width: 100%; }
+  .buttons-bar-down {
+    display: none; }
+  .proyects {
+    background-color: #052232; }
+    .proyects .row {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap; }
+      .proyects .row .card-proyect {
+        width: 280px;
+        margin: unset;
+        padding: 0;
+        text-align: center; }
+  .about-me {
+    background-color: #314a5c; }
+    .about-me .row {
+      letter-spacing: 0;
+      font-size: 0; }
+      .about-me .row .card-profile, .about-me .row .video {
+        display: inline-block;
+        vertical-align: top; }
+      .about-me .row .card-profile {
+        width: 60%;
+        padding: 0;
+        letter-spacing: 2px;
+        font-size: 1rem; }
+        .about-me .row .card-profile h3 {
+          display: none; }
+        .about-me .row .card-profile figure {
+          width: 35%; }
+        .about-me .row .card-profile p {
+          width: 65%;
+          padding: 0 1rem 0 1.5rem;
+          font-size: 1rem; }
+      .about-me .row .video {
+        width: 40%;
+        margin-top: 0;
+        padding: 0; }
+  .footer {
+    display: block;
+    padding: 3rem 0; } }
