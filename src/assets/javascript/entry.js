@@ -43,22 +43,16 @@ import './arrays.js';
 
     let btnLeft = document.querySelector('.buttons-bar-down .arrow-left');
 
-    btnLeft.addEventListener('click', () => {
-        elements.forEach(e => {
-            document.querySelector('.' + e.name).style.opacity = "0";
-            document.querySelector('.' + e.name).style.zIndex = "0";
-            e.number = moveToLeft(e.number);
-            if (e.number == 0 ) { 
-                document.querySelector('.' + e.name).style.opacity = "1";
-                document.querySelector('.' + e.name).style.zIndex = "1";
-            }
-            document.querySelector('.' + e.name).style.left = e.number + "%";
+    if (btnLeft != null)
+        btnLeft.addEventListener('click', moveCardToLeft);
 
-        })
-    });
 
     let btnRight = document.querySelector('.buttons-bar-down .arrow-right');
-    btnRight.addEventListener('click', () => {
+
+    if (btnRight != null)
+        btnRight.addEventListener('click', moveCardToRight);
+    
+    function moveCardToRight () {
         elements.forEach(e => {
 
             document.querySelector('.' + e.name).style.opacity = "0";
@@ -71,8 +65,21 @@ import './arrays.js';
             document.querySelector('.' + e.name).style.left = e.number + "%";
 
         })
-    });
-   
+    }
+
+    function moveCardToLeft () {
+        elements.forEach(e => {
+            document.querySelector('.' + e.name).style.opacity = "0";
+            document.querySelector('.' + e.name).style.zIndex = "0";
+            e.number = moveToLeft(e.number);
+            if (e.number == 0 ) { 
+                document.querySelector('.' + e.name).style.opacity = "1";
+                document.querySelector('.' + e.name).style.zIndex = "1";
+            }
+            document.querySelector('.' + e.name).style.left = e.number + "%";
+
+        })
+    }
   
 
     /* Media Query */

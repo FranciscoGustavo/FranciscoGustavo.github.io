@@ -1,3 +1,13 @@
+body[data-page='proyects'], body[data-page='aboutme'], body[data-page='contact'] {
+    header {
+        background-image: none;
+        .container:last-child {
+            display: block;
+            min-height: auto;
+        }
+    }
+}
+
 .proyects-page {
     padding: 0rem 0 2.5rem 0;
     background-color: white;
@@ -9,4 +19,28 @@
         padding: 1rem;
         margin-bottom: 2rem;
     }
+}
+
+
+@media screen and (min-width: 900px){
+
+    .proyects-page {
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding-top: 5rem;
+        }
+
+        .card-proyect {   
+            width: 280px;
+            margin: unset;
+            padding: 1rem;
+            margin-bottom: 5rem;
+            border-radius: 5px;
+            text-align: center;
+        }
+    }
+    
+
 }

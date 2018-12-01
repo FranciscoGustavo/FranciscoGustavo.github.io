@@ -25,3 +25,42 @@
     }
 
 }
+
+@media screen and (min-width: 900px) {
+    .aboutme {
+        max-width: 1000px;
+        margin: auto;
+        font-size: 0;
+        letter-spacing: 0;
+
+        .image-and-text, .box-details {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .image-and-text {
+            width: 25%;
+            figure, .text {
+                display: block;
+                width: 100%;
+            }
+
+            .box-info {
+                padding: 0;
+                padding-top: 1.5rem;
+                p { padding-left: 0; }
+            }
+        }
+
+        .buttons {
+            display: none;
+        }
+
+        .box-details {
+            width: 75%;
+            padding-left: 2rem;
+        }
+    }
+}
