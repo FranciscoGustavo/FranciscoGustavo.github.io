@@ -9,24 +9,52 @@ html(lang="en")
     body(data-page='proyects')
         include includes/headerMenu.pug
 
-        .container-box.container-fluid.proyects-page
+        .fluid-container.demo-page
             .container
+                .header
+                    h2 Demos
+
+                    .coniainer-buttons
+                        button.mdl-btn.mdl-circle.mdl-circle-unelevated.mdl-ripple.fas.fa-arrow-left.arrow-left
+                        button.mdl-btn.mdl-circle.mdl-circle-unelevated.mdl-ripple.fas.fa-arrow-right.arrow-right
+
                 .row 
-                    .card-proyect
-                        h2 Titulo del proyecto
-                        p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque omnis cupiditate officiis ex! Aut quam ex voluptatum minus inventore obcaecati, tenetur id repellendus maxime quia similique harum atque quod delectus.
-                        a(href="") Ver
-                    .card-proyect
-                        h2 Titulo del proyecto
-                        p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque omnis cupiditate officiis ex! Aut quam ex voluptatum minus inventore obcaecati, tenetur id repellendus maxime quia similique harum atque quod delectus.
-                        a(href="") Ver
-                    .card-proyect
-                        h2 Titulo del proyecto
-                        p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque omnis cupiditate officiis ex! Aut quam ex voluptatum minus inventore obcaecati, tenetur id repellendus maxime quia similique harum atque quod delectus.
-                        a(href="") Ver
-                    .card-proyect
-                        h2 Titulo del proyecto
-                        p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque omnis cupiditate officiis ex! Aut quam ex voluptatum minus inventore obcaecati, tenetur id repellendus maxime quia similique harum atque quod delectus.
-                        a(href="") Ver
+                    include includes/items/demo_proyect.pug
+                    
+                    include includes/items/demo_proyect.pug
+                    
+                    include includes/items/demo_proyect.pug
+                
+                
+        .fluid-container.proyects-page
+            .container 
+                .header
+                    h2 Diseños web
+
+                    .coniainer-buttons
+                        button.mdl-btn.mdl-circle.mdl-circle-unelevated.mdl-ripple.fas.fa-arrow-left.arrow-left
+                        button.mdl-btn.mdl-circle.mdl-circle-unelevated.mdl-ripple.fas.fa-arrow-right.arrow-right
+
+                .row
+
+                    include includes/items/demo_proyect.pug
+                    
+                    include includes/items/demo_proyect.pug
+                    
+                    include includes/items/demo_proyect.pug
+
+                    include includes/items/demo_proyect.pug
+                    
+                    include includes/items/demo_proyect.pug
+                    
+                    include includes/items/demo_proyect.pug
+
+        .fluid-container.tools-page
+            .container
+                .info-text
+                    h4 GridGeek
+                    p   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero optio odio quam repellendus ea reprehenderit voluptatem. Repellendus, velit amet. Ea, perspiciatis obcaecati! Sint enim dolorum dolor saepe magnam soluta corporis.
+                img(src='/public/grid.jpg')
+                button.mdl-btn.mdl-rised.mdl-ripple Ver Codigo Fuente
 
         include includes/footer.pug

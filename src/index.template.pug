@@ -9,55 +9,31 @@ html(lang="en")
     body(data-page='index')
         include includes/headerMenu.pug
 
-        .container-box
-            .buttons-bar-down
-                button.arrow-left.fas.fa-chevron-left
-                .bars
-                    button
-                    button
-                    button
+        button.mdl-btn.mdl-circle.mdl-circle-unelevated.mdl-ripple.fas.fa-arrow-up.arrow-up
+        button.mdl-btn.mdl-circle.mdl-circle-unelevated.mdl-ripple.fas.fa-arrow-down.arrow-down
+
+        .fluid-container.quotation-container
+            .container
+                include includes/items/card_quotation.pug
+        .fluid-container.type-page-container
+            .container
+                button.fas.fa-chevron-left.arrow-left
+                .row
+                    .col
+                        include includes/items/card_type_page.pug
+                    .col
+                        include includes/items/card_type_page.pug
+                    .col
+                        include includes/items/card_type_page.pug
                 button.arrow-right.fas.fa-chevron-right
-            .container-fluid.slide
-                .container
-                    button.arrow-left.fas.fa-chevron-left
-                    button.arrow-right.fas.fa-chevron-right
-                    .text
-                        h1 Biblioteca Geek
-                        p Desarrollo de sitios web profesionales. Dale una imagen mas profecional a tu negocio.
-
-            .container-fluid.proyects
+        .fluid-container.demo-index
                 .container
                     .row
-                        .card-proyect
-                            h2 Facilito Retro
-                            p Pagina echa en la participacion en CodigoFacilito
-                            a(href="/facilitoretro" target="_blank") Ver
-
-                        .card-proyect
-                            h2 Next Party
-                            p Encuentra las mejores fiestas muy serca de ti
-                            a(href="/nextparty" target="_blank") Ver
-
-                        .card-proyect
-                            h2 Estetica Michel
-                            p Sistema de administración para un pequeño negocio a nivel local 
-                            a(href="/proyects/esteticamichel" target="_blank") Ver
-
-            .container-fluid.about-me
-                .container
+                        include includes/items/demo_page_index.pug
+                        include includes/items/demo_page_index.pug
+                        include includes/items/demo_page_index.pug
                     .row
-                        .card-profile
-                            h3 Desarrollador Frontend 
-                            .image-and-text
-                                figure
-                                    img(src="/public/my-profile.jpg", alt="")
-                                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur qui, omnis labore porro incidunt sunt eos vitae repellat recusandae veniam esse consectetur blanditiis quasi, illum aliquam.
-                            
-                        .video
-                            .container-video
-                                <iframe src="https://www.youtube.com/embed/vq20p_l-74c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            
-            include includes/footer.pug
- 
-
-                    
+                        include includes/items/demo_page_index.pug
+                        include includes/items/demo_page_index.pug
+                        include includes/items/demo_page_index.pug
+        include includes/footer.pug

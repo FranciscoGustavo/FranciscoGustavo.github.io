@@ -1,46 +1,170 @@
-body[data-page='proyects'], body[data-page='aboutme'], body[data-page='contact'] {
-    header {
-        background-image: none;
-        .container:last-child {
-            display: block;
-            min-height: auto;
-        }
+body[data-page='proyects']{
+    .demo-proyect {
+        background-color: #FFF;
+        overflow: hidden;
+    }
+}
+
+.demo-page, .proyects-page, .tools-page {
+	position: relative;
+	top: 0;
+	left: 0;
+    width: 100vw;
+    padding: 5rem 1rem;
+    overflow: hidden;
+
+    .container {
+        overflow: hidden;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.2rem 0.2rem 2rem 0;
+    }
+
+    .arrow-left, .arrow-right {
+        width: 50px;
+        height: 50px;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.5), 0 0 6px rgba(0, 0, 0, 0.4);
+    }
+
+    .arrow-left {
+        margin-right: 0.5rem;
+    }
+}
+
+.demo-page {
+    display: flex;
+    align-items: center;
+
+    .row {
+        display: flex;
+        width: 300%;
+        margin-left: -50%;
     }
 }
 
 .proyects-page {
-    padding: 0rem 0 2.5rem 0;
-    background-color: white;
-    overflow: scroll;
+    background-color: $primary;
 
-    .card-proyect {
-        background-color: $primary-light;
-        color: black;
-        padding: 1rem;
+    .header {
+        h2 {
+            color: $white;
+        }
+    }
+    
+    .row {    
+        display: flex;
+        width: 600%;
+        margin-left: -310%;
+    }
+}
+
+.tools-page {
+    padding-bottom: 7rem; 
+    text-align: center;
+
+    .container {
+        padding-bottom: 1rem; 
+    }
+
+    h4 {
+        margin-bottom: 1rem;
+        text-align: center;
+        font-size: 1.75rem;
+    }
+
+    p {
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    img {
         margin-bottom: 2rem;
     }
 }
 
 
-@media screen and (min-width: 900px){
+@media screen and (min-width: 680px){
+
+    .demo-page, .proyects-page, .tools-page {
+        .header {
+            padding: 0.5rem 0.5rem 2rem 0;
+        }
+    }
+
+    .demo-page {
+        .row {
+            width: 150%;
+            margin-left: -75%;
+        }
+    }
 
     .proyects-page {
         .row {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            padding-top: 5rem;
-        }
-
-        .card-proyect {   
-            width: 280px;
-            margin: unset;
-            padding: 1rem;
-            margin-bottom: 5rem;
-            border-radius: 5px;
-            text-align: center;
+            width: 300%;
+            margin-left: -125%;
         }
     }
-    
 
+    .tools-page {
+        max-width: 450px;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 780px){
+
+    body[data-page='proyects']{
+        .demo-proyect {
+            margin: unset;
+            margin-bottom: 4rem;
+        }
+    }
+
+    .demo-page, .proyects-page, .tools-page {
+        padding: 5rem 0;
+    }
+
+    .demo-page, .proyects-page {
+        .row {
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-left: 0%;
+        }
+
+        .header {
+            .coniainer-buttons {
+                display: none;
+            }
+        }
+    }
+
+    .proyects-page {
+        padding-top: 9rem;
+    }
+
+    .tools-page {
+        max-width: none;
+        margin: auto;
+        font-size: 0;
+        letter-spacing: 0;
+
+        .info-text, img {
+            display: inline-block;
+            vertical-align: middle;
+            width: 50%;
+            font-size: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .info-text {
+            padding-right: 2rem;
+            letter-spacing: 5px;
+            line-height: 30px;
+        }
+    }
 }

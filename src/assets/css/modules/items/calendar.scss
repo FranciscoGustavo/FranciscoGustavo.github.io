@@ -1,0 +1,57 @@
+.container-calendar {
+    display: none;
+    padding: 0.5rem;
+    max-width: 400px;
+
+
+    &.active {
+        display: block;
+    }
+}
+
+.calendar {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5),
+                0 2px 4px rgba(0,0,0,0.4),
+                0 3px 5px rgba(0,0,0,0.3);
+
+    overflow: hidden;
+    .row, .row-days {
+        border-bottom: solid 1px gray;
+        font-size: 0;
+        letter-spacing: 0;
+
+        &:last-child {
+            border-bottom: 0px;
+        }
+
+
+        .column {
+            display: inline-block;
+            width: 14.285714285714285714285714285714%;
+            padding: 1rem 0rem;
+            border-right: solid 1px gray;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            text-align: center;
+
+            &:last-child {
+                border-right: 0;
+            }
+        }
+    }
+
+    .row {
+        .column {
+            font-weight: bold;
+            font-size: 1rem;
+        }
+    }
+
+    .row-days {
+        .column {
+            padding: 0.5rem 0;
+        }
+    }
+}

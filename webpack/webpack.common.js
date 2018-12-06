@@ -25,6 +25,12 @@ const contact = new HtmlWebpackPlugin({
   filename: 'contact.html'
 })
 
+const item = new HtmlWebpackPlugin({
+  title: 'NextParty',
+  template: './src/items.templates.pug',
+  filename: 'item.html'
+})
+
 module.exports = {
   mode: 'development',
   entry: './src/assets/javascript/entry.js',
@@ -37,7 +43,8 @@ module.exports = {
     index,
     proyects,
     aboutme,
-    contact
+    contact,
+    item
   ],
   module: {
     rules: [

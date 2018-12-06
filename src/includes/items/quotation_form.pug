@@ -1,0 +1,32 @@
+.container-form
+    form(id="quotation-form").form-mdl
+        .input-form
+            input(type="text" id="name" name="name")
+            label(for="name") Nombre
+        .input-form
+            input(type="email" id="email" name="email")
+            label(for="email") Correo
+        .input-form
+            input(type="text" id="phone" name="phone")
+            label(for="phone") Telefono
+        .input-schedule
+            button.mdl-btn.mdl-outline.mdl-ripple.scheduled-btn(data-ripple="dark") Agendar Llamado
+            .scheduled
+                p Llamada programada para el Martes a las 12:00
+        .input-send 
+            button.mdl-btn.mdl-rised.mdl-ripple Enviar Solicitud 
+
+.container-calendar
+    .calendar()
+        .row-days
+            .column dom
+            .column Lun
+            .column Mar
+            .column Mié
+            .column Jue
+            .column Vie
+            .column Sáb
+        each val in [1,2,3,4,5]
+            .row
+                each val in [1,2,3,4,5,6,7]
+                    .column= val

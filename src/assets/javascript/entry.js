@@ -1,10 +1,56 @@
 import '../css/app.scss';
-import './arrays.js';
+import './frameworks/buttons_mdl.js'
+import './frameworks/form_mdl.js'
 
 (function(){
+    let scheduledBtn = document.querySelector('button.scheduled-btn');
 
+    if (scheduledBtn != null) scheduledBtn.addEventListener('click', showCalendar);
+
+    function showCalendar (e) {
+        e.preventDefault();
+
+        let calendar = document.querySelector('.container-calendar');
+        e.target.parentElement.appendChild(calendar);
+        calendar.classList.toggle('active');
+    } 
+
+    let iframePages = [
+        { class : '.type-page-container', status : false },
+        { class : '.demo-index', status : false }
+    ]
+
+    let index = 0;
+    let btnDown = document.querySelector('.arrow-down');
+    let btnUp = document.querySelector('.arrow-up');
+
+    if (btnDown != null) btnDown.addEventListener('click', moveDown);
+    if (btnUp != null) btnUp.addEventListener('click', moveUp);
+
+    function moveDown () {
+        let card = document.querySelector(iframePages[index].class);
+        card.classList.add('show');
+
+        index++;
+        buttonsUpAndDown();
+    }
+
+    function moveUp () {
+        index--;
+        buttonsUpAndDown();
+        let card = document.querySelector(iframePages[index].class);
+        card.classList.remove('show');
+    }
+
+    function buttonsUpAndDown(){
+        index != 0 ? btnUp.classList.add('show') : btnUp.classList.remove('show');
+        index == 2 ? btnDown.classList.add('hidden') : btnDown.classList.remove('hidden');
+    }
+
+
+    if (document.querySelector('body[data-page="proyects"]') != null) document.querySelector('html').style.overflowY = 'scroll'; 
     /* Menu */
-
+/*
     let pages = [
         { title: 'index', place: 0 },
         { title: 'proyects', place: 1 },
@@ -82,10 +128,10 @@ import './arrays.js';
     }
   
 
-    /* Media Query */
+    /* Media Query 
     function myFunction(x) {
         if (x.matches) { // If media query matches
-              /* Mover Slide */
+              /* Mover Slide 
 
             let slide = document.querySelector('.slide .container');
             console.log(slide.parentElement);
@@ -103,5 +149,5 @@ import './arrays.js';
     var x = window.matchMedia("(min-width: 900px)")
     myFunction(x) 
     x.addListener(myFunction)
-
+*/
 })();
