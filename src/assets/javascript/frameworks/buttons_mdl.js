@@ -1,7 +1,6 @@
 class Ripple {
     constructor(selector){
       this.buttons = document.querySelectorAll(selector);
-      console.log(this.buttons);
       this.bindEvents();
     }
     

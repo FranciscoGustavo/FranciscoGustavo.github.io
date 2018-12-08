@@ -42,7 +42,8 @@ body[data-page='proyects']{
     .row {
         display: flex;
         width: 300%;
-        margin-left: -50%;
+        margin-left: 0;
+        transition: all 0.2s;
     }
 }
 
@@ -58,7 +59,7 @@ body[data-page='proyects']{
     .row {    
         display: flex;
         width: 600%;
-        margin-left: -310%;
+        transition: all 0.2s;
     }
 }
 

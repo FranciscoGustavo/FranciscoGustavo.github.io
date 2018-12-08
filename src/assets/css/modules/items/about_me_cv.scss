@@ -1,0 +1,50 @@
+.cv {
+    height: 50vh;
+    margin: 1rem;
+    overflow: hidden;
+
+    .container-buttons {
+        .buttons {
+            width: 100%;
+            border: solid 2px $secondary;
+            border-radius: 1.25rem;
+            overflow: hidden;
+            font-size: 0;
+            letter-spacing: 0;
+
+            button {
+                display: inline-block;
+                width: 33.33%;
+                border-radius: 0;
+                border-right: solid 2px $secondary;
+
+                &:last-child { border-right: 0px; }
+
+
+                span { display: none; }
+                
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width: 680px){
+    .cv {
+        display: inline-block;
+        vertical-align: top;
+        width: 55%;
+        height: auto;
+        margin: 0;
+        padding: 1rem;
+        padding-top: 0;
+    }
+
+    .container-buttons { display: none; }
+}
+
+@media screen and (min-width: 780px){
+    .cv {
+        width: 70%;
+    }
+}

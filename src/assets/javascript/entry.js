@@ -2,7 +2,11 @@ import '../css/app.scss';
 import './frameworks/buttons_mdl.js'
 import './frameworks/form_mdl.js'
 
+import './carousel.js'
+
 (function(){
+    /* CALENDAR OF QUOTATION */
+
     let scheduledBtn = document.querySelector('button.scheduled-btn');
 
     if (scheduledBtn != null) scheduledBtn.addEventListener('click', showCalendar);
@@ -14,6 +18,9 @@ import './frameworks/form_mdl.js'
         e.target.parentElement.appendChild(calendar);
         calendar.classList.toggle('active');
     } 
+
+
+    /* BUTTONS OF INDEX */
 
     let iframePages = [
         { class : '.type-page-container', status : false },
@@ -49,6 +56,24 @@ import './frameworks/form_mdl.js'
 
 
     if (document.querySelector('body[data-page="proyects"]') != null) document.querySelector('html').style.overflowY = 'scroll'; 
+    
+    
+    /* OPTIONS OF CV BY ABOUT ME */
+
+    let BtnDescription = document.querySelector('.btn-description');
+    let BtnEducation = document.querySelector('.btn-education');
+    let BtnSkills = document.querySelector('.btn-skills');
+
+    BtnDescription.addEventListener('click', ()=>{
+        document.querySelector('.cv .row').style.marginLeft = 0;
+    });
+    BtnEducation.addEventListener('click', ()=>{
+        document.querySelector('.cv .row').style.marginLeft = -100 + '%';
+    });
+    BtnSkills.addEventListener('click', ()=>{
+        document.querySelector('.cv .row').style.marginLeft = -200 + '%';
+    });
+
     /* Menu */
 /*
     let pages = [
@@ -150,4 +175,6 @@ import './frameworks/form_mdl.js'
     myFunction(x) 
     x.addListener(myFunction)
 */
+
+
 })();
