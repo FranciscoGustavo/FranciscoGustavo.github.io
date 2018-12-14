@@ -3,7 +3,7 @@
 	padding-top: 12px;
 }
 
-.input-form input {
+.input-form input, .textarea-form textarea {
 	width: 100%;
 	border: none;
 	padding: 8px 0px;
@@ -11,6 +11,19 @@
 	color: $primary-light;
 	font-size: 1rem; 
 }
+
+.textarea-form {
+	margin-bottom: 1rem;
+	textarea {
+		height: 150px;
+		resize: none;
+
+		&:focus {
+			outline: none;
+		}
+	}
+}
+
 
 .input-form input:focus {
 	outline: none;

@@ -9,8 +9,22 @@ html(lang="en")
     body(data-page='contact')
         include includes/headerMenu.pug
 
-        .container-box.container-fluid.conatct-page
+        .fluid-container.contact-me
             .container
-                
+                .row 
+                    .text 
+                        h1 Mandame un mensaje o contactanos por alguna de muestras redes sociales   
+                    .container-contact-form
+                        include includes/items/contact_me.pug
+                    .social-media
+                        a(href="") 
+                            i.fab.fa-facebook
+                            span Facebook
+                        a(href="") 
+                            i.fab.fa-twitter
+                            span Twitter
+                        a(href="") 
+                            i.fab.fa-youtube
+                            span Youtube
 
         include includes/footer.pug

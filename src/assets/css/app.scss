@@ -15,6 +15,7 @@
 
 @import './modules/proyects.scss';
 @import './modules/aboutme.scss';
+@import './modules/contactme.scss';
 
 * {
 	padding: 0;
@@ -97,12 +98,18 @@ header {
 	opacity: 0;
 }
 
-.quotation-container, .type-page-container, .demo-index {
+.quotation-container, .type-page-container, .demo-index, .quotation-step-one {
 	position: relative;
 	top: 0;
 	left: 0;
 	width: 100vw;
 	height: 100vh;
+}
+
+.quotation-step-one {
+	position: fixed;
+	z-index: 50;
+	background-color: $white;
 }
 
 .quotation-container {

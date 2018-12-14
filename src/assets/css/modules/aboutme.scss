@@ -60,5 +60,19 @@
 @media screen and (min-width: 780px){
     .about-me {
         height: auto;
+        
+        .card-cv {
+            margin-bottom: 3rem;
+            h2 {
+                background-color: $secondary;
+                padding: 1rem;
+                color: $primary-dark;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                padding-left: 1rem;
+            }
+        }
     }
 }

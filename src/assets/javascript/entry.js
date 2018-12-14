@@ -64,18 +64,22 @@ import './carousel.js'
     let BtnEducation = document.querySelector('.btn-education');
     let BtnSkills = document.querySelector('.btn-skills');
 
-    BtnDescription.addEventListener('click', ()=>{
-        document.querySelector('.cv .row').style.marginLeft = 0;
-    });
-    BtnEducation.addEventListener('click', ()=>{
-        document.querySelector('.cv .row').style.marginLeft = -100 + '%';
-    });
-    BtnSkills.addEventListener('click', ()=>{
-        document.querySelector('.cv .row').style.marginLeft = -200 + '%';
-    });
+    if (BtnDescription != null && BtnEducation != null && BtnSkills != null){ 
+
+        BtnDescription.addEventListener('click', ()=>{
+            document.querySelector('.cv .row').style.marginLeft = 0;
+        });
+        BtnEducation.addEventListener('click', ()=>{
+            document.querySelector('.cv .row').style.marginLeft = -100 + '%';
+        });
+        BtnSkills.addEventListener('click', ()=>{
+            document.querySelector('.cv .row').style.marginLeft = -200 + '%';
+        });
+    
+    }
 
     /* Menu */
-/*
+
     let pages = [
         { title: 'index', place: 0 },
         { title: 'proyects', place: 1 },
@@ -90,91 +94,69 @@ import './carousel.js'
         if (page.title === dataPage) menu[page.place].classList.add('active');
     })
 
-    function moveToRight (top) {
-        if(top === 0) { top = -100; }
-        else if(top === -100) { top = 100; }
-        else if(top === 100) { top = 0; }
+ 
+    /* Slide animated */
 
+    function moveToRight (top) {
+        if(top === 0) { top = -90; }
+        else if(top === -90) { top = 90; }
+        else if(top === 90) { top = 0; }
         return top;
     }
-
     function moveToLeft (top) {
-        if(top === 0) { top = 100; }
-        else if(top === 100) { top = -100; }
-        else if(top === -100) { top = 0; }
-
+        if(top === 0) { top = 90; }
+        else if(top === 90) { top = -90; }
+        else if(top === -90) { top = 0; }
         return top;
     }
 
     let elements = [
-        { number: 0, name: "slide" },
-        { number: 100, name: "proyects" },
-        { number: -100, name: "about-me" }
+        { number: 0, name: ".type-page-container .col:nth-child(1)" },
+        { number: 90, name: ".type-page-container .col:nth-child(2)" },
+        { number: -90, name: ".type-page-container .col:nth-child(3)" }
     ]
 
-    let btnLeft = document.querySelector('.buttons-bar-down .arrow-left');
-
-    if (btnLeft != null)
-        btnLeft.addEventListener('click', moveCardToLeft);
-
-
-    let btnRight = document.querySelector('.buttons-bar-down .arrow-right');
-
-    if (btnRight != null)
-        btnRight.addEventListener('click', moveCardToRight);
+    let btnLeft = document.querySelector('.type-page-container .arrow-left');
+    if (btnLeft != null) btnLeft.addEventListener('click', moveCardToLeft);
     
-    function moveCardToRight () {
-        elements.forEach(e => {
+    let btnRight = document.querySelector('.type-page-container  .arrow-right');
+    if (btnRight != null) btnRight.addEventListener('click', moveCardToRight);
 
-            document.querySelector('.' + e.name).style.opacity = "0";
-            document.querySelector('.' + e.name).style.zIndex = "0";
+    function moveCardToRight () {
+            console.log('\n');
+        elements.forEach(e => {
+            let item = document.querySelector(e.name);
+
             e.number = moveToRight(e.number);
-            if (e.number == 0 ) { 
-                document.querySelector('.' + e.name).style.opacity = "1";
-                document.querySelector('.' + e.name).style.zIndex = "1";
-            }
-            document.querySelector('.' + e.name).style.left = e.number + "%";
+
+            item.style.transformOrigin = "right bottom";
+            item.style.transform = "rotateZ(" + (e.number) + "deg)";
 
         })
     }
 
     function moveCardToLeft () {
         elements.forEach(e => {
-            document.querySelector('.' + e.name).style.opacity = "0";
-            document.querySelector('.' + e.name).style.zIndex = "0";
+            let item = document.querySelector(e.name);
+
             e.number = moveToLeft(e.number);
-            if (e.number == 0 ) { 
-                document.querySelector('.' + e.name).style.opacity = "1";
-                document.querySelector('.' + e.name).style.zIndex = "1";
-            }
-            document.querySelector('.' + e.name).style.left = e.number + "%";
+
+            item.style.transformOrigin = "left bottom";
+            item.style.transform = "rotateZ(" + (e.number) + "deg)";
 
         })
-    }
-  
-
-    /* Media Query 
-    function myFunction(x) {
-        if (x.matches) { // If media query matches
-              /* Mover Slide 
-
-            let slide = document.querySelector('.slide .container');
-            console.log(slide.parentElement);
-            slide.parentElement.remove();
-
-            let header = document.querySelector('header');
-
-            header.appendChild(slide)
-            //document.body.style.backgroundColor = "yellow";
-        } else {
-            //document.body.style.backgroundColor = "pink";
-        }
-    }
     
-    var x = window.matchMedia("(min-width: 900px)")
-    myFunction(x) 
-    x.addListener(myFunction)
-*/
+    }
 
+    let BtnCreateQuotation = document.querySelector('.createQuotation');
+
+    if (BtnCreateQuotation != null) BtnCreateQuotation.addEventListener('click', showQuotation);
+
+    function showQuotation () {
+        let PageWhite = document.createElement('div');
+        PageWhite.classList.add('quotation-step-one')
+        PageWhite.appendChild(document.querySelector('.insert-in-quotation'));
+        document.querySelector('body').appendChild(PageWhite);
+    }
 
 })();
